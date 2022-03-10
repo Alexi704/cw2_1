@@ -56,6 +56,6 @@ if __name__ == '__main__':
     # pp(get_posts_by_user('Johnny')[0]['poster_name']) # тестируем
     # pp(get_comments_by_post_id(3)) # тестируем
     # pp(search_for_posts('Ржавые Елки')) # тестируем
-    pp(get_post_by_pk(3)['pk']) # тестируем
+    # pp(get_post_by_pk(3)['pk']) # тестируем
     # pp(PATH_POSTS)
     # pp(PATH_COMMENTS)
