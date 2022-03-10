@@ -50,7 +50,7 @@ def get_post_by_pk(pk):
         if post['pk'] == pk:
             return post
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
     # pp(get_posts_all()[1]['poster_name']) # тестируем
     # pp(get_posts_all()[0]['pk']) # тестируем
     # pp(get_posts_by_user('Johnny')[0]['poster_name']) # тестируем
