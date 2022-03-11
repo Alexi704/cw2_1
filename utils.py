@@ -33,7 +33,7 @@ def get_comments_by_post_id(post_id):
 
 
 def search_for_posts(query):
-    """возвращает список словарей по вхождению query"""
+    """возвращает список словарей по вхождению query (поисковая функция) """
     posts = get_posts_all()
     list_posts_by_search = []
     for post in posts:
