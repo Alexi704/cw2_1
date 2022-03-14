@@ -1,7 +1,8 @@
 import json
-from config import PATH_POSTS, PATH_COMMENTS
 from pprint import pprint as pp
 
+PATH_POSTS = 'data/posts.json'
+PATH_COMMENTS = 'data/comments.json'
 
 def get_posts_all():
     """ возвращает все посты """
@@ -46,16 +47,18 @@ def search_for_posts(query):
 def get_post_by_pk(pk):
     """ возвращает один пост по его идентификатору """
     posts = get_posts_all()
-    for post in posts:
-        if post['pk'] == pk:
-            return post
+    post = None
+    for item in posts:
+        if item['pk'] == pk:
+            post = item
+            break
+    return post
+
 
 # if __name__ == '__main__':
-    # pp(get_posts_all()[1]['poster_name']) # тестируем
-    # pp(get_posts_all()[0]['pk']) # тестируем
-    # pp(get_posts_by_user('Johnny')[0]['poster_name']) # тестируем
-    # pp(get_comments_by_post_id(3)) # тестируем
-    # pp(search_for_posts('Ржавые Елки')) # тестируем
-    # pp(get_post_by_pk(3)['pk']) # тестируем
-    # pp(PATH_POSTS)
-    # pp(PATH_COMMENTS)
+#     pp(get_posts_all()[1]['poster_name']) # тестируем
+#     pp(get_posts_all()[0]['pk']) # тестируем
+#     pp(get_posts_by_user('Johnny')[0]['poster_name']) # тестируем
+#     pp(get_comments_by_post_id(3)) # тестируем
+#     pp(search_for_posts('ржавые елки')) # тестируем
+#     pp(get_post_by_pk(2)['pk']) # тестируем

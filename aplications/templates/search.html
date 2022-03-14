@@ -34,10 +34,10 @@
     </div>
     <section class="items">
       {% if s != '' %}
-        {% for post in search_posts: %}
+        {% for post in output_post: %}
           <div class="items__item item">
           <div class="item__top">
-            <a href="/user-feed" class="item__head">
+            <a href="/users/{{post.poster_name}}" class="item__head">
               <div class="item__ava-wrap">
                 <img src="{{ post.poster_avatar }}" alt="" class="item__ava" width="47">
               </div>
